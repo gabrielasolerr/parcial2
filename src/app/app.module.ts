@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PartidoModule } from './partido/partido.module';
 import { AwayTeamModule } from './awayTeam/awayTeam.module';
 import { HomeTeamModule } from './homeTeam/homeTeam.module';
+import { EquipoModule } from './equipo/equipo.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeTeamModule } from './homeTeam/homeTeam.module';
     PartidoModule,
     AwayTeamModule,
     HomeTeamModule,
+    EquipoModule,
     HttpClientModule
   ],
   providers: [],

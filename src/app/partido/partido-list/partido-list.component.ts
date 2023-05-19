@@ -20,6 +20,7 @@ export class PartidoListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getPartidos();
   }
 
 }

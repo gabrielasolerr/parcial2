@@ -8,12 +8,13 @@
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Away Team</th>
           <th scope="col">Datetime</th>
+          <th scope="col">Away Team</th>
           <th scope="col">Home Team</th>
           <th scope="col">Location</th>
-          <th scope="col">Stage Name</th>
+          <th scope="col">Status</th>
           <th scope="col">Winner</th>
+
 
         </tr>
       </thead>
@@ -23,9 +24,29 @@
             <dd class="partido-id">{{partido.id}}</dd>
           </td>
 
-          <!-- <td>
-            <dd class="partido-awayTeam">{{partido.awayTeam.namw}}</dd>
-          </td> -->
+          <td>
+            <dd class="partido-datetime">{{partido.datetime}}</dd>
+          </td>
+
+          <td>
+            <dd class="partido-awayTeam">{{partido.away_team.name}}</dd>
+          </td>
+
+          <td>
+            <dd class="partido-homeTeam">{{partido.home_team.name}}</dd>
+          </td>
+
+          <td>
+            <dd class="partido-location">{{partido.location}}</dd>
+          </td>
+
+          <td>
+            <dd class="partido-status">{{partido.status}}</dd>
+          </td>
+
+          <td>
+            <dd class="partido-winner">{{partido.winner}}</dd>
+          </td>
 
         </tr>
       </tbody>

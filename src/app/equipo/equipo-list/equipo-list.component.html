@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Group Points</th>
+          <th scope="col">Country</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let equipo of equipos">
+          <td>
+            <dd class="equipo-name">{{equipo.name}}</dd>
+          </td>
+
+          <td>
+            <dd class="equipo-group_points">{{equipo.group_points}}</dd>
+          </td>
+
+          <td>
+            <dd class="equipo-country">{{equipo.country}}</dd>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

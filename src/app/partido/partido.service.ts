@@ -10,7 +10,7 @@ import { Partido } from './partido';
 })
 export class PartidoService {
 
-  private apiUrl: string = environment.baseUrl + 'partidos';
+  private apiUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
