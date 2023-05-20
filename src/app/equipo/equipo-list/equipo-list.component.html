@@ -1,3 +1,7 @@
+<div *ngIf="selected">
+  <app-equipo-detail [equipoDetail]="selectedEquipo"></app-equipo-detail>
+</div>
+
 <div class="container-fluid">
   <h2 class="col-6">Equipos <img src="images/jugador-de-futbol.png" style="border:2px groove rgb(0, 0, 0)"></h2>
   <div class="col-6">
@@ -11,7 +15,7 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let equipo of equipos">
+        <tr *ngFor="let equipo of equipos" (click)="onSelected(equipo)">
           <td>
             <dd class="equipo-name">{{equipo.name}}</dd>
           </td>

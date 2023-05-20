@@ -12,6 +12,8 @@ export class EquipoListComponent implements OnInit {
 
   grupos: Array<Grupo> = [];
   equipos: Array<Equipo> = [];
+  selectedEquipo! : Equipo;
+  selected: Boolean = false;
 
   constructor(private equipoService: EquipoService) { }
 
@@ -29,10 +31,10 @@ export class EquipoListComponent implements OnInit {
     });
   }
 
-  // onSelected(equipo: Equipo): void {
-  //   this.selected = true;
-  //   this.selectedEquipo = equipo;
-  // }
+  onSelected(equipo: Equipo): void {
+     this.selected = true;
+     this.selectedEquipo = equipo;
+  }
 
   ngOnInit() {
     this.getEquipos();
