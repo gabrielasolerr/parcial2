@@ -12,3 +12,8 @@ h2 {
 th {
   color: white;
 }
+
+img {
+  height: 50px;
+  width: 50px;
+}
