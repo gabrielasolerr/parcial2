@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: rgba(20, 20, 20, 0.89);
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  font-size: 80px;
+}
+
+th {
+  color: white;
+}
