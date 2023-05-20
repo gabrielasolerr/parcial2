@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .containerHead{
   display: flex;
-  background-color: rgb(20, 0, 92);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  background-color: rgb(29, 5, 116);
   vertical-align: middle;
   margin-bottom: 20px;
   font-size: 100px;
