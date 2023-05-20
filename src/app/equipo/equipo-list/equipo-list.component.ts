@@ -16,16 +16,16 @@ export class EquipoListComponent implements OnInit {
   constructor(private equipoService: EquipoService) { }
 
   getEquipos(): void {
-    this.equipoService.getGrupos().subscribe((grupos: { gruposs: any;}) => {
-      let tempGrupo: Grupo[] = [];
-      console.log(grupos.gruposs);
-      grupos.gruposs.forEach((grupo: Grupo) => {
+    this.equipoService.getGrupos().subscribe((grupos: { groups: any;}) => {
+      let lista: Grupo[] = [];
+      console.log(grupos.groups);
+      grupos.groups.forEach((grupo: Grupo) => {
         grupo.teams.forEach((equipo) => {
           this.equipos.push(equipo);
         });
-        tempGrupo.push(grupo);
+        lista.push(grupo);
       });
-      this.grupos = tempGrupo;
+      this.grupos = lista;
     });
   }
 

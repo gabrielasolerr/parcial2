@@ -14,8 +14,8 @@ export class EquipoService {
   private equipos: Equipo[] = [];
   private apiUrl: string = environment.baseUrl2;
 
-
   constructor(private http: HttpClient) { }
+
     getGrupos(): any {
       return this.http.get<any>(this.apiUrl);
   }
