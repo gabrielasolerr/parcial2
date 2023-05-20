@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipo } from '../equipo';
 import { EquipoService } from '../equipo.service';
+import { Grupo } from '../grupo';
 
 @Component({
   selector: 'app-equipo-list',
@@ -9,15 +10,29 @@ import { EquipoService } from '../equipo.service';
 })
 export class EquipoListComponent implements OnInit {
 
+  grupos: Array<Grupo> = [];
   equipos: Array<Equipo> = [];
 
   constructor(private equipoService: EquipoService) { }
 
   getEquipos(): void {
-    this.equipoService.getEquipos().subscribe((equipos) => {
-      this.equipos = equipos;
+    this.equipoService.getGrupos().subscribe((grupos: { gruposs: any;}) => {
+      let tempGrupo: Grupo[] = [];
+      console.log(grupos.gruposs);
+      grupos.gruposs.forEach((grupo: Grupo) => {
+        grupo.teams.forEach((equipo) => {
+          this.equipos.push(equipo);
+        });
+        tempGrupo.push(grupo);
+      });
+      this.grupos = tempGrupo;
     });
   }
+
+  // onSelected(equipo: Equipo): void {
+  //   this.selected = true;
+  //   this.selectedEquipo = equipo;
+  // }
 
   ngOnInit() {
     this.getEquipos();
